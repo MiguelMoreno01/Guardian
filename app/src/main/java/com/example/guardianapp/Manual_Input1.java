@@ -20,7 +20,7 @@ public class Manual_Input1 extends AppCompatActivity {
         setContentView(R.layout.activity_manual__input1);
 
         stateInput = (EditText) findViewById(R.id.state_input);
-        cityInput = (EditText) findViewById(R.id.city_input);
+        cityInput = findViewById(R.id.city_input);
 
         submitButton = (Button) findViewById(R.id.submit_button);
         submitButton.setOnClickListener(new View.OnClickListener() {
