@@ -1,39 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@drawable/homepage_gradientbackground"
     tools:context=".FullscreenActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
     <TextView
         android:id="@+id/AuthMessage"
         android:layout_width="wrap_content"
-        android:layout_height="209dp"
-        android:layout_marginLeft="138dp"
-        android:layout_marginTop="100dp"
-        android:typeface="serif"
-        android:textSize="30dp"
-        android:text="Location?" />
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="138sp"
+        android:layout_marginTop="231dp"
+        android:text="Location?"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:typeface="serif" />
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="213dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/locationOn"
-        android:layout_width="wrap_content"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="110dp"
-        android:text="Enable Location Service" />
+        android:layout_marginBottom="275dp"
+        android:text="@string/enable_location_service"
+        android:background="@drawable/custom_button"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/manual"
-        android:layout_width="wrap_content"
+        android:layout_width="141dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="150dp"
-        android:text="Manual Input" />
+        android:layout_marginTop="400dp"
+        android:text="@string/manual_input"
+        android:background="@drawable/custom_button"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
 
-</FrameLayout>
+</RelativeLayout>
