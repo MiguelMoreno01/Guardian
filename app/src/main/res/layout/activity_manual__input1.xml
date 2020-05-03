@@ -40,7 +40,7 @@
             android:layout_height="64dp"
             android:ems="10"
             android:hint="State (IL)"
-            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
         <EditText
@@ -50,6 +50,7 @@
             android:ems="10"
             android:hint="City (Chicago)"
             android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
