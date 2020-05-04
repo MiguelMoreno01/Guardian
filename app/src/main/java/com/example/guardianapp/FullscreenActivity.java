@@ -91,6 +91,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     // Button to go to manual input
     private Button manual_input;
+    private Button auto_input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +105,13 @@ public class FullscreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openManual_Input();
+            }
+        });
+        auto_input = findViewById(R.id.locationOn);
+        auto_input.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAuto_Input();
             }
         });
 
@@ -130,6 +138,12 @@ public class FullscreenActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Manual_Input1.class);
         startActivity(intent);
     }
+
+    public void openAuto_Input() {
+        Intent intent = new Intent(this, getLocation.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
