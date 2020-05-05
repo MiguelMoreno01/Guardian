@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="388dp"
         android:src="@drawable/logo" />
 
     <LinearLayout
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="89dp"
         android:orientation="vertical">
 
         <TextView
@@ -43,15 +43,6 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
-        <EditText
-            android:id="@+id/city_input"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:ems="10"
-            android:hint="City (Chicago)"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
     <Button
@@ -60,9 +51,9 @@
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="156dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginBottom="344dp"
         android:background="@drawable/custom_button"
-        android:text="Submit" />
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

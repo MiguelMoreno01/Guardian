@@ -5,15 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/homepage_gradientbackground"
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center_horizontal"
     tools:context=".getLocation">
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/findLocation"
-        android:text="What's my location?"/>
+        android:text="Find Current Location"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button"/>
 
 
     <LinearLayout
@@ -26,12 +30,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FFFFFF"
             android:id="@+id/text_view1"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FFFFFF"
             android:id="@+id/text_view2"/>
 
     </LinearLayout>
@@ -46,12 +52,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FFFFFF"
             android:id="@+id/text_view3"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FFFFFF"
             android:id="@+id/text_view4"/>
 
     </LinearLayout>
@@ -60,13 +68,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
         android:id="@+id/text_view5"/>
     <Button
         android:id="@+id/confirmation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
-        android:text="This is my location" />
+        android:text="Confirm Current Location"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button"/>
 
 
 </LinearLayout>

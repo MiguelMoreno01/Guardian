@@ -29,7 +29,14 @@ public class DataofState extends AppCompatActivity {
         Intent intent = getIntent();
         state = intent.getStringExtra("State");
         mQueue = Volley.newRequestQueue(this);
-        jsonParse();
+        if (state.length() < 2 || state.length() > 2) {
+            TextView theStateView = findViewById(R.id.theState);
+            theStateView.setText("This State Abreviation is Invalid");
+        } else {
+            state = state.toUpperCase();
+            jsonParse();
+        }
+
 
 
 
@@ -37,7 +44,7 @@ public class DataofState extends AppCompatActivity {
 
     }
     private void jsonParse() {
-        String url = "https://api.usa.gov/crime/fbi/sapi/api/summarized/estimates/states/" + state + "/2001/2021?api_key=Pr2eCj1ZWdnoog0ocfP0PNl4nu4MsPmbX62PyafF";
+        String url = "https://api.usa.gov/crime/fbi/sapi/api/summarized/estimates/states/" + state + "/2016/2020?api_key=Pr2eCj1ZWdnoog0ocfP0PNl4nu4MsPmbX62PyafF";
 
         JsonObjectRequest request= new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -52,6 +59,7 @@ public class DataofState extends AppCompatActivity {
                             yeard = year.getInt("year");
                         }
                     }
+
                     TextView theStateView = findViewById(R.id.theState);
                     theStateView.setText(getState(state) + " : Reported Data as of " + yeard);
 
@@ -74,6 +82,8 @@ public class DataofState extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                TextView theStateView = findViewById(R.id.theState);
+                theStateView.setText(getState(state));
                 error.printStackTrace();
             }
         });

@@ -95,7 +95,7 @@ public class getLocation extends AppCompatActivity {
                                         + addresses.get(0).getLatitude()
                         ));
                         textView3.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b>Country Name :</b><br></font>"
+                                "<font color='#6200EE'><b>Postal Code :</b><br></font>"
                                         + addresses.get(0).getPostalCode()
                         ));
                         textView4.setText(Html.fromHtml(
@@ -103,6 +103,7 @@ public class getLocation extends AppCompatActivity {
                                         + addresses.get(0).getAdminArea()
                         ));
                         state = addresses.get(0).getAdminArea();
+                        state = getAbre(state);
                         textView5.setText(Html.fromHtml(
                                 "<font color='#6200EE'><b>Address :</b><br></font>"
                                         + addresses.get(0).getAddressLine(0)
@@ -120,5 +121,109 @@ public class getLocation extends AppCompatActivity {
         Intent intent = new Intent(this, DataofState.class);
         intent.putExtra("State", state);
         startActivity(intent);
+    }
+    public String getAbre(String abr) {
+        if (abr.equals("Alabama")) {
+            return "AL";
+        } else if (abr.equals("Alaska")) {
+            return "AK";
+        } else if (abr.equals("Arizona")) {
+            return "AZ";
+        } else if (abr.equals("Arkansas")) {
+            return "AR";
+        } else if (abr.equals("California")) {
+            return "CA";
+        } else if (abr.equals("Colorado")) {
+            return "CO";
+        } else if (abr.equals("Connecticut")) {
+            return "CT";
+        } else if (abr.equals("Delaware")) {
+            return "DE";
+        } else if (abr.equals("Georgia")) {
+            return "GA";
+        } else if (abr.equals("Florida")) {
+            return "FL";
+        } else if (abr.equals("Hawaii")) {
+            return "HI";
+        } else if (abr.equals("Idaho")) {
+            return "ID";
+        } else if (abr.equals("Illinois")) {
+            return "IL";
+        } else if (abr.equals("Iowa")) {
+            return "IA";
+        } else if (abr.equals("Indiana")) {
+            return "IN";
+        } else if (abr.equals("Kansas")) {
+            return "KS";
+        } else if (abr.equals("Kentucky")) {
+            return "KY";
+        } else if (abr.equals("Louisiana")) {
+            return "LA";
+        } else if (abr.equals("Maine")) {
+            return "ME";
+        } else if (abr.equals("Maryland")) {
+            return "MD";
+        } else if (abr.equals("Massachusetts")) {
+            return "MA";
+        } else if (abr.equals("Michigan")) {
+            return "MI";
+        } else if (abr.equals("Minnesota")) {
+            return "MN";
+        } else if (abr.equals("Mississippi")) {
+            return "MS";
+        } else if (abr.equals("Missouri")) {
+            return "MO";
+        } else if (abr.equals("Montana")) {
+            return "MT";
+        } else if (abr.equals("Nebraska")) {
+            return "NE";
+        } else if (abr.equals("Nevada")) {
+            return "NV";
+        } else if (abr.equals("New Hampshire")) {
+            return "NH";
+        } else if (abr.equals("New Jersey")) {
+            return "NJ";
+        } else if (abr.equals("New Mexico")) {
+            return "NM";
+        } else if (abr.equals("New York")) {
+            return "NY";
+        } else if (abr.equals("North Carolina")) {
+            return "NC";
+        } else if (abr.equals("North Dakota")) {
+            return "ND";
+        } else if (abr.equals("Ohio")) {
+            return "OH";
+        } else if (abr.equals("Oklahoma")) {
+            return "OK";
+        } else if (abr.equals("Oregon")) {
+            return "OR";
+        } else if (abr.equals("Pennsylvania")) {
+            return "PA";
+        } else if (abr.equals("Rhode Island")) {
+            return "RI";
+        } else if (abr.equals("South Carolina")) {
+            return "SC";
+        } else if (abr.equals("South Dakota")) {
+            return "SD";
+        } else if (abr.equals("Tennessee")) {
+            return "TN";
+        } else if (abr.equals("Texas")) {
+            return "TX";
+        }else if (abr.equals("Utah")) {
+            return "UT";
+        } else if (abr.equals("Vermont")) {
+            return "VT";
+        } else if (abr.equals("Virginia")) {
+            return "VA";
+        } else if (abr.equals("Washington")) {
+            return "WA";
+        } else if (abr.equals("West Virginia")) {
+            return "WV";
+        } else if (abr.equals("Wisconsin")) {
+            return "WI";
+        } else if (abr.equals("Wyoming")) {
+            return "WY";
+        }
+        return "Inserted Unknown State Abreviation";
     }
 }
