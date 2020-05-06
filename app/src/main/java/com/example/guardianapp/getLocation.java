@@ -92,7 +92,7 @@ public class getLocation extends AppCompatActivity {
                         ));
                         textView2.setText(Html.fromHtml(
                                 "<font color='#6200EE'><b>Longitude :</b><br></font>"
-                                        + addresses.get(0).getLatitude()
+                                        + addresses.get(0).getLongitude()
                         ));
                         textView3.setText(Html.fromHtml(
                                 "<font color='#6200EE'><b>Postal Code :</b><br></font>"
