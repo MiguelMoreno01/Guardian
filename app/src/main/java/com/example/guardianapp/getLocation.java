@@ -99,7 +99,7 @@ public class getLocation extends AppCompatActivity {
                                         + addresses.get(0).getPostalCode()
                         ));
                         textView4.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b>Locality :</b><br></font>"
+                                "<font color='#6200EE'><b>State :</b><br></font>"
                                         + addresses.get(0).getAdminArea()
                         ));
                         state = addresses.get(0).getAdminArea();
